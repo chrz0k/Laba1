@@ -1,4 +1,6 @@
-﻿namespace Laba1
+﻿using System;
+
+namespace Laba1
 {
     internal class Program
     {
@@ -12,10 +14,10 @@
                 Console.WriteLine("=== Лабораторная работа №1 ===");
                 Console.WriteLine(" 0) Выход из программы");
 
-                Console.WriteLine(" 1) 1.2.  Сумма знаков (сложение двух последних знаков)");
-                Console.WriteLine(" 2) 1.4.  Есть ли позитив (положительное ли число)");
-                Console.WriteLine(" 3) 1.6.  Большая буква (true если буква заглавная)");
-                Console.WriteLine(" 4) 1.8.  Делитель (true если нацело делятся числа)");
+                Console.WriteLine(" 1) 1.2.  Сумма знаков");
+                Console.WriteLine(" 2) 1.4.  Есть ли позитив");
+                Console.WriteLine(" 3) 1.6.  Большая буква");
+                Console.WriteLine(" 4) 1.8.  Делитель");
                 Console.WriteLine(" 5) 1.10. Многократный вызов");
 
                 Console.WriteLine(" 6) 2.2.  Безопасное деление");
@@ -47,12 +49,7 @@
                         {
                             Console.Write("Введите число(не менее 10): ");
 
-                            int x = functions.GetIntInput();
-                            while (x < 10)
-                            {
-                                Console.Write("Ошибка! Введено число не менее 10: ");
-                                x = functions.GetIntInput();
-                            }
+                            int x = functions.GetIntInput(10,int.MaxValue);
                             x = functions.SumLastNums(x);
 
                             Console.WriteLine($"Сумма последних двух цифр: {x}");
@@ -115,91 +112,153 @@
                             break;
                         }
 
-                    case 6:
+                    case 6: // 2.2.
+                        {
+                            Console.Write("Введите x: ");
+                            int x = functions.GetIntInput();
+                            Console.Write("Введите y: ");
+                            int y = functions.GetIntInput();
+
+                            double result = functions.SafeDiv(x, y);
+                            Console.WriteLine($"Результат деления x на y: {result}");
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 7: // 2.4.
+                        {
+                            Console.Write("Введите x: ");
+                            int x = functions.GetIntInput();
+                            Console.Write("Введите y: ");
+                            int y = functions.GetIntInput();
+
+                            string result = functions.MakeDecision(x, y);
+                            Console.WriteLine($"Результат: {result}");
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 8: // 2.6.
+                        {
+                            Console.Write("Введите x: ");
+                            int x = functions.GetIntInput();
+                            Console.Write("Введите y: ");
+                            int y = functions.GetIntInput();
+                            Console.Write("Введите z: ");
+                            int z = functions.GetIntInput();
+
+                            bool result = functions.Sum3(x, y, z);
+                            Console.WriteLine($"Результат: {result}");
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 9: // 2.8.
+                        {
+                            Console.Write("Введите ваш возраст: ");
+                            int x = functions.GetIntInput(0,int.MaxValue);
+
+                            Console.WriteLine("Вам " + functions.Age(x));
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 10: // 2.10.
+                        {
+                            Console.Write("Введите день недели(пример: четверг): ");
+                            string day = Console.ReadLine();
+
+                            Console.WriteLine("Результат:");
+                            functions.PrintDays(day);
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 11: // 3.2.
+                        {
+                            Console.Write("Введите число: ");
+                            int x = functions.GetIntInput();
+
+                            Console.WriteLine("Результат: '" + functions.ReverseListNums(x) + "'");
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 12: // 3.4.
+                        {
+                            Console.Write("Введите x: ");
+                            int x = functions.GetIntInput();
+                            Console.Write("Введите y: ");
+                            int y = functions.GetIntInput(0,int.MaxValue);
+
+                            Console.WriteLine("Результат(x^y): " + functions.Pow(x,y));
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 13: // 3.6.
+                        {
+                            Console.Write("Введите число: ");
+                            int x = functions.GetIntInput();
+
+                            Console.WriteLine("Результат: " + functions.EqualNum(x));
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 14: // 3.8.
+                        {
+                            Console.Write("Введите число: ");
+                            int x = functions.GetIntInput();
+
+                            Console.WriteLine("Результат: ");
+                            functions.LeftTriangle(x);
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 15: // 3.10.
+                        {
+                            functions.GuessGame();
+
+                            functions.Pause();
+                            break;
+                        }
+
+                    case 16: // 4.2.
                         {
                             functions.Pause();
                             break;
                         }
 
-                    case 7:
+                    case 17: // 4.4.
                         {
                             functions.Pause();
                             break;
                         }
 
-                    case 8:
+                    case 18: // 4.6.
                         {
                             functions.Pause();
                             break;
                         }
 
-                    case 9:
+                    case 19: // 4.8.
                         {
                             functions.Pause();
                             break;
                         }
 
-                    case 10:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 11:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 12:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 13:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 14:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 15:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 16:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 17:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 18:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 19:
-                        {
-                            functions.Pause();
-                            break;
-                        }
-
-                    case 20:
+                    case 20: // 4.10.
                         {
                             functions.Pause();
                             break;
@@ -207,11 +266,19 @@
 
 
 
-                    case 0: Console.WriteLine("Выход из программы.."); break;
-                    default: Console.WriteLine("Ошибка! Ты ввел неверное значение."); functions.Pause(); break;
+                    case 0:
+                        Console.WriteLine("Выход из программы.");
+                        break;
+                    default:
+                        Console.WriteLine("Ошибка! Введено неверное значение.");
+                        functions.Pause();
+                        break;
                 }
+
             }
 
         }
+
     }
+
 }
