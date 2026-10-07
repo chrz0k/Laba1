@@ -515,7 +515,7 @@ x = "чг"
 Реализация метода:
 
 ```csharp
-public void PrintDays(string x) // Для задачи 2.10.
+public void PrintDays(string day)
 {
     string[] days = { "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье" };
     switch (x)
