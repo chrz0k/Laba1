@@ -474,7 +474,7 @@ public string Age(int x)
 
 ### Тестирование
 
-**
+*<img width="370" height="131" alt="image" src="https://github.com/user-attachments/assets/a3152939-f5f0-41bd-bc90-dea02182da21" />*
 
 ## Задача 5
 
@@ -557,7 +557,7 @@ public void PrintDays(string day)
 
 ### Тестирование
 
-**
+*<img width="416" height="247" alt="image" src="https://github.com/user-attachments/assets/8536364c-ab22-46bc-8284-28e2ddca97eb" />*
 
 # Задание 3
 
@@ -606,7 +606,7 @@ public string ReverseListNums(int x)
 
 ### Тестирование
 
-**
+*<img width="381" height="141" alt="image" src="https://github.com/user-attachments/assets/7d2fe987-238f-4b5c-91e7-c5127ce836e8" />*
 
 ## Задача 2
 
@@ -649,7 +649,7 @@ public int Pow(int x, int y)
 
 ### Тестирование
 
-**
+*<img width="365" height="155" alt="image" src="https://github.com/user-attachments/assets/388ec5b1-b645-4d9d-a091-73534c359503" />*
 
 ## Задача 3
 
@@ -707,7 +707,7 @@ public bool EqualNum(int x)
 
 ### Тестирование
 
-**
+*<img width="362" height="136" alt="image" src="https://github.com/user-attachments/assets/e5596a2b-a920-4bff-9325-9fdd1d443431" />*
 
 ## Задача 4
 
@@ -764,7 +764,7 @@ public void LeftTriangle(int x)
 
 ### Тестирование
 
-**
+*<img width="363" height="249" alt="image" src="https://github.com/user-attachments/assets/4b56bcc2-105a-4c62-afd3-9f1ef011d785" />*
 
 ## Задача 5
 
@@ -819,7 +819,7 @@ public void GuessGame()
 
 ### Тестирование
 
-**
+*<img width="380" height="197" alt="image" src="https://github.com/user-attachments/assets/cf8ec616-f866-479f-845c-30dc1d838bd8" />*
 
 # Задание 4
 
