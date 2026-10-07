@@ -16,14 +16,14 @@
             }
         }
 
-        public int GetIntInput(int x, int y)
+        public int GetIntInput(int min, int max)
         {
             while (true)
             {
                 string inputString = Console.ReadLine();
                 if (int.TryParse(inputString, out int result))
                 {
-                    if (result >= x && result <= y)
+                    if (result >= min && result <= max)
                     {
                         return result;
                     }
@@ -278,7 +278,7 @@
             while (x != randomNum)
             {
                 Console.Write("Вы не угадали, введите число от 0 до 9: ");
-                x = GetIntInput();
+                x = GetIntInput(0, 9);
                 countTry++;
             }
             Console.WriteLine("Вы угадали!");

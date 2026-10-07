@@ -161,7 +161,7 @@
                     case 9: // Задача 2.8.
                         {
                             Console.Write("Введите ваш возраст: ");
-                            int x = functions.GetIntInput(0, int.MaxValue);
+                            int x = functions.GetIntInput(0, 150);
 
                             Console.WriteLine($"Вам {functions.Age(x)}");
 
@@ -184,7 +184,7 @@
                     case 11: // Задача 3.2.
                         {
                             Console.Write("Введите число: ");
-                            int x = functions.GetIntInput(0, int.MaxValue);
+                            int x = functions.GetIntInput(0, 1000);
 
                             Console.WriteLine($"Результат: '{functions.ReverseListNums(x)}'");
 
@@ -194,10 +194,10 @@
 
                     case 12: // Задача 3.4.
                         {
-                            Console.Write("Введите x: ");
-                            int x = functions.GetIntInput();
-                            Console.Write("Введите y: ");
-                            int y = functions.GetIntInput(0, int.MaxValue);
+                            Console.Write("Введите x(от -10 до 10): ");
+                            int x = functions.GetIntInput(-10,10);
+                            Console.Write("Введите y(от 0 до 9): ");
+                            int y = functions.GetIntInput(0, 9);
 
                             Console.WriteLine($"Результат(x^y): {functions.Pow(x, y)}");
 
@@ -219,7 +219,7 @@
                     case 14: // Задача 3.8.
                         {
                             Console.Write("Введите число: ");
-                            int x = functions.GetIntInput();
+                            int x = functions.GetIntInput(1,50);
 
                             Console.WriteLine("Результат: ");
                             functions.LeftTriangle(x);
