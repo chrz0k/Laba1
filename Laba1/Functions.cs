@@ -169,43 +169,46 @@
             switch (x)
             {
                 case "понедельник":
-                    for (int i = Array.IndexOf(days, "понедельник") + 1; i <= 6; i++)
+                    for (int i = Array.IndexOf(days, "понедельник"); i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
                     break;
                 case "вторник":
-                    for (int i = Array.IndexOf(days, "вторник") + 1; i <= 6; i++)
+                    for (int i = Array.IndexOf(days, "вторник"); i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
                     break;
                 case "среда":
-                    for (int i = Array.IndexOf(days, "среда") + 1; i <= 6; i++)
+                    for (int i = Array.IndexOf(days, "среда"); i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
                     break;
                 case "четверг":
-                    for (int i = Array.IndexOf(days, "четверг") + 1; i <= 6; i++)
+                    for (int i = Array.IndexOf(days, "четверг"); i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
                     break;
                 case "пятница":
-                    for (int i = Array.IndexOf(days, "пятница") + 1; i <= 6; i++)
+                    for (int i = Array.IndexOf(days, "пятница"); i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
                     break;
                 case "суббота":
-                    for (int i = Array.IndexOf(days, "суббота") + 1; i <= 6; i++)
+                    for (int i = Array.IndexOf(days, "суббота"); i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
                     break;
                 case "воскресенье":
-                    Console.WriteLine("Это был последний день недели.");
+                    for (int i = Array.IndexOf(days, "воскресенье"); i <= 6; i++)
+                    {
+                        Console.WriteLine(days[i]);
+                    }
                     break;
                 default:
                     Console.WriteLine("Это не день недели.");
