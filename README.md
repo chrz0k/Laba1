@@ -515,42 +515,56 @@ x = "чг"
 Реализация метода:
 
 ```csharp
-public void PrintDays(string day)
+public void PrintDays(string x) // Для задачи 2.10.
 {
     string[] days = { "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье" };
-    int start;
-
-    switch (day?.Trim().ToLower())
+    switch (x)
     {
         case "понедельник":
-            start = 0;
+            for (int i = Array.IndexOf(days, "понедельник"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         case "вторник":
-            start = 1;
+            for (int i = Array.IndexOf(days, "вторник"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         case "среда":
-            start = 2;
+            for (int i = Array.IndexOf(days, "среда"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         case "четверг":
-            start = 3;
+            for (int i = Array.IndexOf(days, "четверг"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         case "пятница":
-            start = 4;
+            for (int i = Array.IndexOf(days, "пятница"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         case "суббота":
-            start = 5;
+            for (int i = Array.IndexOf(days, "суббота"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         case "воскресенье":
-            start = 6;
+            for (int i = Array.IndexOf(days, "воскресенье"); i <= 6; i++)
+            {
+                Console.WriteLine(days[i]);
+            }
             break;
         default:
             Console.WriteLine("Это не день недели.");
-            return;
-    }
-
-    for (int i = start; i < days.Length; i++)
-    {
-        Console.WriteLine(days[i]);
+            break;
     }
 }
 ```
@@ -871,7 +885,7 @@ public int FindLast(int[] arr, int x)
 
 ### Тестирование
 
-**
+*<img width="423" height="163" alt="image" src="https://github.com/user-attachments/assets/83646cc5-1b1e-4702-8d75-c3a88b5e3da9" />*
 
 ## Задача 2
 
@@ -926,7 +940,7 @@ public int[] Add(int[] arr, int x, int pos)
 
 ### Тестирование
 
-**
+*<img width="387" height="178" alt="image" src="https://github.com/user-attachments/assets/e85a8f9f-ca92-4c59-ace7-c80f0b590054" />*
 
 ## Задача 3
 
@@ -974,7 +988,7 @@ public void Reverse(int[] array)
 
 ### Тестирование
 
-**
+*<img width="362" height="138" alt="image" src="https://github.com/user-attachments/assets/6fad9a5f-a411-4cd0-b2b4-19689fba01a4" />*
 
 ## Задача 4
 
@@ -1023,7 +1037,7 @@ public int[] Concat(int[] arr1, int[] arr2)
 
 ### Тестирование
 
-**
+*<img width="375" height="152" alt="image" src="https://github.com/user-attachments/assets/7b8a843f-47c7-494a-8edf-16b6b0bbef96" />*
 
 ## Задача 5
 
@@ -1085,4 +1099,4 @@ public int[] DeleteNegative(int[] arr)
 
 ### Тестирование
 
-**
+*<img width="365" height="139" alt="image" src="https://github.com/user-attachments/assets/03c4d442-ce13-4ad7-b646-3e2b81e2aec2" />*
