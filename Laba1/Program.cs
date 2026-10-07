@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Laba1
+﻿namespace Laba1
 {
     internal class Program
     {
@@ -35,7 +33,7 @@ namespace Laba1
                 Console.WriteLine("16) 4.2.  Поиск последнего значения");
                 Console.WriteLine("17) 4.4.  Добавление в массив");
                 Console.WriteLine("18) 4.6.  Реверс");
-                Console.WriteLine("19) 4.8.  Обьединение");
+                Console.WriteLine("19) 4.8.  Объединение");
                 Console.WriteLine("20) 4.10. Удалить негатив");
 
                 Console.WriteLine("============================");
@@ -45,11 +43,11 @@ namespace Laba1
 
                 switch (choice)
                 {
-                    case 1: // 1.2.
+                    case 1: // Задача 1.2.
                         {
                             Console.Write("Введите число(не менее 10): ");
 
-                            int x = functions.GetIntInput(10,int.MaxValue);
+                            int x = functions.GetIntInput(10, int.MaxValue);
                             x = functions.SumLastNums(x);
 
                             Console.WriteLine($"Сумма последних двух цифр: {x}");
@@ -58,7 +56,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 2: // 1.4.
+                    case 2: // Задача 1.4.
                         {
                             Console.Write("Введите число: ");
                             int x = functions.GetIntInput();
@@ -69,11 +67,15 @@ namespace Laba1
                             break;
                         }
 
-                    case 3: // 1.6.
+                    case 3: // Задача 1.6.
                         {
                             Console.Write("Введите букву(на англ): ");
                             char a = functions.GetCharInput();
-
+                            while (!char.IsLetter(a) || (a >= 'А' && a <= 'я'))
+                            {
+                                Console.Write("Ошибка! Введите корректную букву: ");
+                                a = functions.GetCharInput();
+                            }
                             bool isUpper = functions.IsUpperCase(a);
                             Console.WriteLine($"Заглавная ли это буква: {isUpper}");
 
@@ -81,7 +83,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 4: // 1.8.
+                    case 4: // Задача 1.8.
                         {
                             Console.Write("Введите первое число: ");
                             int x = functions.GetIntInput();
@@ -95,7 +97,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 5: // 1.10.
+                    case 5: // Задача 1.10.
                         {
                             Console.Write("Введите 1-е число: ");
                             int result = functions.GetIntInput();
@@ -112,7 +114,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 6: // 2.2.
+                    case 6: // Задача 2.2.
                         {
                             Console.Write("Введите x: ");
                             int x = functions.GetIntInput();
@@ -126,7 +128,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 7: // 2.4.
+                    case 7: // Задача 2.4.
                         {
                             Console.Write("Введите x: ");
                             int x = functions.GetIntInput();
@@ -140,7 +142,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 8: // 2.6.
+                    case 8: // Задача 2.6.
                         {
                             Console.Write("Введите x: ");
                             int x = functions.GetIntInput();
@@ -156,18 +158,18 @@ namespace Laba1
                             break;
                         }
 
-                    case 9: // 2.8.
+                    case 9: // Задача 2.8.
                         {
                             Console.Write("Введите ваш возраст: ");
-                            int x = functions.GetIntInput(0,int.MaxValue);
+                            int x = functions.GetIntInput(0, int.MaxValue);
 
-                            Console.WriteLine("Вам " + functions.Age(x));
+                            Console.WriteLine($"Вам {functions.Age(x)}");
 
                             functions.Pause();
                             break;
                         }
 
-                    case 10: // 2.10.
+                    case 10: // Задача 2.10.
                         {
                             Console.Write("Введите день недели(пример: четверг): ");
                             string day = Console.ReadLine();
@@ -179,42 +181,42 @@ namespace Laba1
                             break;
                         }
 
-                    case 11: // 3.2.
+                    case 11: // Задача 3.2.
                         {
                             Console.Write("Введите число: ");
-                            int x = functions.GetIntInput();
+                            int x = functions.GetIntInput(0, int.MaxValue);
 
-                            Console.WriteLine("Результат: '" + functions.ReverseListNums(x) + "'");
+                            Console.WriteLine($"Результат: '{functions.ReverseListNums(x)}'");
 
                             functions.Pause();
                             break;
                         }
 
-                    case 12: // 3.4.
+                    case 12: // Задача 3.4.
                         {
                             Console.Write("Введите x: ");
                             int x = functions.GetIntInput();
                             Console.Write("Введите y: ");
-                            int y = functions.GetIntInput(0,int.MaxValue);
+                            int y = functions.GetIntInput(0, int.MaxValue);
 
-                            Console.WriteLine("Результат(x^y): " + functions.Pow(x,y));
+                            Console.WriteLine($"Результат(x^y): {functions.Pow(x, y)}");
 
                             functions.Pause();
                             break;
                         }
 
-                    case 13: // 3.6.
+                    case 13: // Задача 3.6.
                         {
                             Console.Write("Введите число: ");
-                            int x = functions.GetIntInput();
+                            int x = functions.GetIntInput(0, int.MaxValue);
 
-                            Console.WriteLine("Результат: " + functions.EqualNum(x));
+                            Console.WriteLine($"Результат: {functions.EqualNum(x)}");
 
                             functions.Pause();
                             break;
                         }
 
-                    case 14: // 3.8.
+                    case 14: // Задача 3.8.
                         {
                             Console.Write("Введите число: ");
                             int x = functions.GetIntInput();
@@ -226,7 +228,7 @@ namespace Laba1
                             break;
                         }
 
-                    case 15: // 3.10.
+                    case 15: // Задача 3.10.
                         {
                             functions.GuessGame();
 
@@ -234,51 +236,208 @@ namespace Laba1
                             break;
                         }
 
-                    case 16: // 4.2.
+                    case 16: // Задача 4.2.
                         {
+                            int[] arr = [1, 2, 3, 4, 2, 2, 5];
+                            Console.Write("Дан массив: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }                     
+                            }
+                            Console.WriteLine("]");
+                            Console.Write("Введите число, индекс которого нужно найти: ");
+                            int x = functions.GetIntInput();
+
+                            Console.WriteLine($"Результат: {functions.FindLast(arr, x)}");
+
                             functions.Pause();
                             break;
                         }
 
-                    case 17: // 4.4.
+                    case 17: // Задача 4.4.
                         {
+                            int[] arr = [1, 2, 3, 4, 5];
+                            Console.Write("Дан массив: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+                            Console.Write("Введите число, которое хотите вставить: ");
+                            int x = functions.GetIntInput();
+                            Console.Write("Введите на какую позицию: ");
+                            int pos = functions.GetIntInput(0, arr.Length);
+
+                            arr = functions.Add(arr, x, pos);
+
+                            Console.Write("Результат: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
                             functions.Pause();
                             break;
                         }
 
-                    case 18: // 4.6.
+                    case 18: // Задача 4.6.
                         {
+                            int[] arr = [1, 2, 3, 4, 5];
+                            Console.Write("Дан массив: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
+                            functions.Reverse(arr);
+
+                            Console.Write("Результат: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
                             functions.Pause();
                             break;
                         }
 
-                    case 19: // 4.8.
+                    case 19: // Задача 4.8.
                         {
+                            int[] arr1 = [1, 2, 3];
+                            int[] arr2 = [7, 8, 9];
+                            Console.Write("Дан массив1: [");
+                            for (int i = 0; i < arr1.Length; i++)
+                            {
+                                if (i == arr1.Length - 1)
+                                {
+                                    Console.Write(arr1[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr1[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+                            Console.Write("Дан массив2: [");
+                            for (int i = 0; i < arr2.Length; i++)
+                            {
+                                if (i == arr2.Length - 1)
+                                {
+                                    Console.Write(arr2[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr2[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
+                            int[] arr3 = new int[arr1.Length + arr2.Length];
+                            arr3 = functions.Concat(arr1, arr2);
+
+                            Console.Write("Результат объединения: [");
+                            for (int i = 0; i < arr3.Length; i++)
+                            {
+                                if (i == arr3.Length - 1)
+                                {
+                                    Console.Write(arr3[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr3[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
                             functions.Pause();
                             break;
                         }
 
-                    case 20: // 4.10.
+                    case 20: // Задача 4.10.
                         {
+                            int[] arr = [1, 2, -3, 4, -2, 2, -5];
+                            Console.Write("Дан массив: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
+                            arr = functions.DeleteNegative(arr);
+
+                            Console.Write("Результат: [");
+                            for (int i = 0; i < arr.Length; i++)
+                            {
+                                if (i == arr.Length - 1)
+                                {
+                                    Console.Write(arr[i]);
+                                }
+                                else
+                                {
+                                    Console.Write(arr[i] + ", ");
+                                }
+                            }
+                            Console.WriteLine("]");
+
                             functions.Pause();
                             break;
                         }
-
-
 
                     case 0:
                         Console.WriteLine("Выход из программы.");
                         break;
+
                     default:
                         Console.WriteLine("Ошибка! Введено неверное значение.");
                         functions.Pause();
                         break;
                 }
-
             }
-
         }
-
     }
-
 }

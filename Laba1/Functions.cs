@@ -1,15 +1,13 @@
-﻿using System.Xml.XPath;
-
-namespace Laba1
+﻿namespace Laba1
 {
     internal class Functions
     {
         public int GetIntInput()
         {
-            while(true)
+            while (true)
             {
                 string inputString = Console.ReadLine();
-                if(int.TryParse(inputString, out int result))
+                if (int.TryParse(inputString, out int result))
                 {
                     return result;
                 }
@@ -56,13 +54,13 @@ namespace Laba1
             Console.ReadKey();
         }
 
-        public int SumLastNums(int x) // 1.2.
+        public int SumLastNums(int x) // Для задачи 1.2.
         {
             int result = x % 10 + (x / 10) % 10;
             return result;
         }
 
-        public bool IsPositive(int x) // 1.4.
+        public bool IsPositive(int x) // Для задачи 1.4.
         {
             if (x > 0)
             {
@@ -74,7 +72,7 @@ namespace Laba1
             }
         }
 
-        public bool IsUpperCase(char x) // 1.6.
+        public bool IsUpperCase(char x) // Для задачи 1.6.
         {
             if (x >= 'A' && x <= 'Z')
             {
@@ -86,7 +84,7 @@ namespace Laba1
             }
         }
 
-        public bool IsDivisor(int a, int b) // 1.8.
+        public bool IsDivisor(int a, int b) // Для задачи 1.8.
         {
             if (a == 0 || b == 0)
             {
@@ -102,12 +100,12 @@ namespace Laba1
             }
         }
 
-        public int LastNumSum(int a, int b) // 1.10.
+        public int LastNumSum(int a, int b) // Для задачи 1.10.
         {
             return a % 10 + b % 10;
         }
 
-        public double SafeDiv(int x,int y) // 2.2.
+        public double SafeDiv(int x, int y) // Для задачи 2.2.
         {
             if (y == 0)
             {
@@ -115,17 +113,17 @@ namespace Laba1
             }
             else
             {
-                return x / y;
+                return (double)x / y;
             }
         }
 
-        public string MakeDecision(int x,int y) // 2.4.
+        public string MakeDecision(int x, int y) // Для задачи 2.4.
         {
-            if(x < y)
+            if (x < y)
             {
                 return $"{x}<{y}";
             }
-            else if(x > y)
+            else if (x > y)
             {
                 return $"{x}>{y}";
             }
@@ -135,9 +133,9 @@ namespace Laba1
             }
         }
 
-        public bool Sum3(int x, int y, int z) // 2.6.
+        public bool Sum3(int x, int y, int z) // Для задачи 2.6.
         {
-            if ((x + y) == z || (x + z) == y || (y + z) == x) 
+            if ((x + y) == z || (x + z) == y || (y + z) == x)
             {
                 return true;
             }
@@ -145,29 +143,33 @@ namespace Laba1
             return false;
         }
 
-        public string Age(int x) // 2.8.
+        public string Age(int x) // Для задачи 2.8.
         {
-            if (x % 10 == 1 && x != 11)
-            {
-                return $"{x} год";
-            }
-            else if ((x % 10 == 2 || x % 10 == 3 || x % 10 == 4) && x != 12 && x != 13 && x != 14)
-            {
-                return $"{x} года";
-            }
-            else
+            int lastTwo = x % 100;
+            int last = x % 10;
+
+            if (lastTwo >= 11 && lastTwo <= 14)
             {
                 return $"{x} лет";
             }
+            if (last == 1)
+            {
+                return $"{x} год";
+            }
+            if (last >= 2 && last <= 4)
+            {
+                return $"{x} года";
+            }
+            return $"{x} лет";
         }
 
-        public void PrintDays(string x) // 2.10.
+        public void PrintDays(string x) // Для задачи 2.10.
         {
             string[] days = { "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье" };
             switch (x)
             {
                 case "понедельник":
-                    for (int i = Array.IndexOf(days, "понедельник") + 1; i <= 6; i++) 
+                    for (int i = Array.IndexOf(days, "понедельник") + 1; i <= 6; i++)
                     {
                         Console.WriteLine(days[i]);
                     }
@@ -203,7 +205,7 @@ namespace Laba1
                     }
                     break;
                 case "воскресенье":
-                    Console.WriteLine("Это был послединй день недели.");
+                    Console.WriteLine("Это был последний день недели.");
                     break;
                 default:
                     Console.WriteLine("Это не день недели.");
@@ -211,7 +213,7 @@ namespace Laba1
             }
         }
 
-        public string ReverseListNums(int x) // 3.2.
+        public string ReverseListNums(int x) // Для задачи 3.2.
         {
             string result = "";
             for (int i = x; i >= 0; i--)
@@ -219,13 +221,13 @@ namespace Laba1
                 result += i;
                 if (i != 0)
                 {
-                    result = result + " ";
+                    result += " ";
                 }
             }
             return result;
         }
 
-        public int Pow(int x, int y) // 3.4.
+        public int Pow(int x, int y) // Для задачи 3.4.
         {
             int result = 1;
             for (int i = 0; i < y; i++)
@@ -235,11 +237,11 @@ namespace Laba1
             return result;
         }
 
-        public bool EqualNum(int x) // 3.6.
+        public bool EqualNum(int x) // Для задачи 3.6.
         {
             while (x > 0)
             {
-                if(x % 10 == x)
+                if (x % 10 == x)
                 {
                     break;
                 }
@@ -252,7 +254,7 @@ namespace Laba1
             return true;
         }
 
-        public void LeftTriangle(int x) // 3.8.
+        public void LeftTriangle(int x) // Для задачи 3.8.
         {
             for (int i = 1; i <= x; i++)
             {
@@ -264,32 +266,119 @@ namespace Laba1
             }
         }
 
-        public void GuessGame()
+        public void GuessGame() // Для задачи 3.10.
         {
-            Functions functions = new Functions();
             Random random = new Random();
             int randomNum = random.Next(0, 10);
             int countTry = 1;
 
             Console.Write("Введите число от 0 до 9: ");
-            int x = functions.GetIntInput();
+            int x = GetIntInput(0, 9);
 
             while (x != randomNum)
             {
                 Console.Write("Вы не угадали, введите число от 0 до 9: ");
-                x = functions.GetIntInput();
-                countTry += 1;
-            }  
+                x = GetIntInput();
+                countTry++;
+            }
             Console.WriteLine("Вы угадали!");
-            Console.WriteLine($"Вы отгадали за {countTry} попытки.");
+            Console.WriteLine($"Количество попыток: {countTry}");
         }
 
+        public int FindLast(int[] arr, int x) // Для задачи 4.2.
+        {
+            int findX = arr.Length + 1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == x)
+                {
+                    findX = i;
+                }
+            }
+            if (findX == arr.Length + 1)
+            {
+                findX = -1;
+            }
+            return findX;
+        }
 
+        public int[] Add(int[] arr, int x, int pos) // Для задачи 4.4.
+        {
+            int[] newArr = new int[arr.Length + 1];
 
+            for (int i = 0; i < pos; i++)
+            {
+                newArr[i] = arr[i];
+            }
 
+            newArr[pos] = x;
 
+            for (int i = pos; i < arr.Length; i++)
+            {
+                newArr[i + 1] = arr[i];
+            }
 
+            return newArr;
+        }
 
+        public void Reverse(int[] array) // Для задачи 4.6.
+        {
+            int[] newArray = new int[array.Length];
+            int j = 0;
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                newArray[j] = array[i];
+                j++;
+            }
 
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = newArray[i];
+            }
+        }
+
+        public int[] Concat(int[] arr1, int[] arr2) // Для задачи 4.8.
+        {
+            int[] newArr = new int[arr1.Length + arr2.Length];
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                newArr[i] = arr1[i];
+            }
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                newArr[i + arr1.Length] = arr2[i];
+            }
+
+            return newArr;
+        }
+
+        public int[] DeleteNegative(int[] arr) // Для задачи 4.10.
+        {
+            int countNeg = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < 0)
+                {
+                    countNeg++;
+                }
+            }
+
+            int[] newArr = new int[arr.Length - countNeg];
+
+            countNeg = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] >= 0)
+                {
+                    newArr[i - countNeg] = arr[i];
+                }
+                else
+                {
+                    countNeg++;
+                }
+            }
+
+            return newArr;
+        }
     }
 }
